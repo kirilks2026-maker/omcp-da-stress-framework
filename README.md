@@ -22,11 +22,11 @@ Unlike standard smart-contract execution tools, this framework bypasses the EVM 
 ## 🚀 Key Modules
 
 ### 1. Account Dispenser (`dispenser.py`)
-- **Purpose**: Automated sub-wallet generation and gas distribution[cite: 10].
+- **Purpose**: Automated sub-wallet generation and gas distribution.
 - **Functionality**:
-  - Automatically provisions 10 sub-operator accounts[cite: 10].
+  - Automatically provisions 10 sub-operator accounts.
   - Signs and broadcasts batch funding transactions (`1.0 OG` each) using dynamic EIP-1559 gas pricing and safe nonce increments[cite: 10].
-  - Formats output arrays directly for ingestion into execution scripts[cite: 10].
+  - Formats output arrays directly for ingestion into execution scripts.
 
 ### 2. Direct DA Storage Ingestor (`da_stress_test.py`)
 - **Purpose**: Direct sharding layer bandwidth & capacity benchmarking.
@@ -34,7 +34,7 @@ Unlike standard smart-contract execution tools, this framework bypasses the EVM 
   - Spawns multi-threaded execution loops controlled via `threading.Semaphore(3)` to prevent network rate-limiting/timeouts.
   - Dynamically creates 350 MB raw data sectors in memory and feeds them into the official `0g-storage-client` CLI binary.
   - Automatically handles garbage collection / ephemeral disk cleanup to operate continuously inside cloud containers.
-  - Targets `https://indexer-storage-testnet-turbo.0g.ai`[cite: 9].
+  - Targets `https://indexer-storage-testnet-turbo.0g.ai`.
 
 ---
 
@@ -61,11 +61,11 @@ python3 da_stress_test.py
 ```
 
 📊 Benchmarking Metrics Tracked
-Ingestion Latency: Time-to-ingest per 350 MB chunk[cite: 9].
+Ingestion Latency: Time-to-ingest per 350 MB chunk.
 
-Throughput Speed: Real-time MB/s bandwidth per stream[cite: 9].
+Throughput Speed: Real-time MB/s bandwidth per stream.
 
-RPC / Indexer Rejections: Detection of connection ceiling limits (e.g., Error -32005) under load[cite: 9].
+RPC / Indexer Rejections: Detection of connection ceiling limits (e.g., Error -32005) under load.
 
 ⚠️ Safety & Environment Notice
-This tool is built for official testnet benchmarking and infrastructure stress testing only. Always ensure running inside isolated cloud runtime environments (e.g., GitHub Codespaces) to prevent local network saturation or disk overflow[cite: 9].
+This tool is built for official testnet benchmarking and infrastructure stress testing only. Always ensure running inside isolated cloud runtime environments (e.g., GitHub Codespaces) to prevent local network saturation or disk overflow.
