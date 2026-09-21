@@ -8,15 +8,16 @@ An industrial-grade, multi-threaded stress-testing framework designed to benchma
 
 Unlike standard smart-contract execution tools, this framework bypasses the EVM mempool entirely to directly target the **0G Storage DA Ingestor and Turbo Indexer**. It generates ephemeral, heavy data sectors in cloud virtual RAM (e.g., GitHub Codespaces) and pushes them over high-speed server-to-server pipes.
 
+<pre>
 [Master Wallet] ──(dispenser.py)──> [10 Operator Accounts]
-                        │
-              (da_stress_test.py)
-                        │
-             [70 GB Data Ingestion]
-                        │
-                        ▼
-        [0G Ingester / Turbo Indexer Node]
-
+       │
+(da_stress_test.py)
+       │
+[70 GB Data Ingestion]
+       │
+       ▼
+[0G Ingester / Turbo Indexer Node]
+</pre>
 ---
 
 ## 🚀 Key Modules
