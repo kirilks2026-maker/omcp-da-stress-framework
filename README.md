@@ -43,20 +43,28 @@ Unlike standard smart-contract execution tools, this framework bypasses the EVM 
 
 ### 1. Prerequisites & Environment
 Ensure Python 3.10+ and `web3.py` are installed:
+
 ```bash
 pip install web3 python-dotenv
 ```
+
 Make sure the official 0g-storage-client binary is placed in the root directory with executable permissions:
+
 ```
 chmod +x 0g-storage-client
 ```
+
 2. Provision Operator Accounts
+   
 Configure your primary funding private key in dispenser.py and run:
+
 ```
 python3 dispenser.py
 ```
 Copy the generated SELF_OPERATOR_KEYS array into da_stress_test.py.
+
 3. Launch the Storage Cascade
+
 ```
 python3 da_stress_test.py
 ```
@@ -68,10 +76,10 @@ Throughput Speed: Real-time MB/s bandwidth per stream.
 
 RPC / Indexer Rejections: Detection of connection ceiling limits (e.g., Error -32005) under load.
 
-⚠️ Safety & Environment Notice
+## ⚠️ Safety & Environment Notice
 This tool is built for official testnet benchmarking and infrastructure stress testing only. Always ensure running inside isolated cloud runtime environments (e.g., GitHub Codespaces) to prevent local network saturation or disk overflow.
 
-Context & Evolution (Phase 1 ➔ Phase 2):
+## 🔄 Context & Evolution (Phase 1 ➔ Phase 2)
 
 Phase 1 (EVM Bottleneck Analysis): Initial stress testing on the EVM layer (GroundRadarStressTester) revealed public RPC rate limits (Error -32005 at 50 reqs) and mempool buffering delays during high-frequency parallel telemetry loops.   
 
