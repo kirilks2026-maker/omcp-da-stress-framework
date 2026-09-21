@@ -69,7 +69,7 @@ Copy the generated SELF_OPERATOR_KEYS array into da_stress_test.py.
 python3 da_stress_test.py
 ```
 
-📊 Benchmarking Metrics Tracked
+## 📊 Benchmarking Metrics Tracked
 Ingestion Latency: Time-to-ingest per 350 MB chunk.
 
 Throughput Speed: Real-time MB/s bandwidth per stream.
