@@ -71,4 +71,6 @@ RPC / Indexer Rejections: Detection of connection ceiling limits (e.g., Error -3
 ⚠️ Safety & Environment Notice
 This tool is built for official testnet benchmarking and infrastructure stress testing only. Always ensure running inside isolated cloud runtime environments (e.g., GitHub Codespaces) to prevent local network saturation or disk overflow.
 
-Context & Evolution (Phase 1 ➔ Phase 2):Phase 1 (EVM Bottleneck Analysis): Initial stress testing on the EVM layer (GroundRadarStressTester) revealed public RPC rate limits (Error -32005 at 50 reqs) and mempool buffering delays during high-frequency parallel telemetry loops.   Phase 2 (Direct DA Storage Shift): To bypass public EVM gateway friction, this repository implements the Phase 2 architecture: streaming 350 MB telemetry sectors directly to the 0G Storage DA Ingestor / Turbo Indexer (da_stress_test.py).   
+Context & Evolution (Phase 1 ➔ Phase 2):
+Phase 1 (EVM Bottleneck Analysis): Initial stress testing on the EVM layer (GroundRadarStressTester) revealed public RPC rate limits (Error -32005 at 50 reqs) and mempool buffering delays during high-frequency parallel telemetry loops.   
+Phase 2 (Direct DA Storage Shift): To bypass public EVM gateway friction, this repository implements the Phase 2 architecture: streaming 350 MB telemetry sectors directly to the 0G Storage DA Ingestor / Turbo Indexer (da_stress_test.py).   
